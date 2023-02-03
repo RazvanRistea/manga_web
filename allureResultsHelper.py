@@ -45,7 +45,7 @@ class AllureReport(Exception):
 
         url = "http://allure.dev.ibet.com:7272/allure-docker-service/send-results"
         params = {
-            'project_id': 'ibet-green',
+            'project_id': 'manga-web',
         }
         payload = {}
         files = data
@@ -70,7 +70,7 @@ class AllureReport(Exception):
         url = "http://allure.dev.ibet.com:7272/allure-docker-service/generate-report"
 
         params = {
-            'project_id': 'ibet-green',
+            'project_id': 'manga-web',
             'execution_name': 'Allure%20Docker%20Service%20UI'
         }
 
