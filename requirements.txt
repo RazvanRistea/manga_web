@@ -33,11 +33,11 @@ pytest-rerunfailures==11.0
 pytest-testconfig>=0.2.0
 pytest-logger>=0.5.1
 marshmallow>=3.7.1
-Faker==16.6.0
+Faker==16.6.1
 uuid~=1.30
 random-username==1.0.2
 python-dateutil~=2.8.2
-boto3==1.26.55
+boto3==1.26.63
 pytest-bdd==6.1.1
 pytest-bdd-ng==1.2.3
 allure-pytest==2.12.0
