@@ -18,8 +18,12 @@ class PlayerPayloadGenerator:
         self.faker = Faker()
 
     @step("Create payload for new user registration step one.")
-    def registrationStepOne(self, email=None, mobilePhone=None, password=None):
+    def registrationStepOne(self, firstName=None, lastName=None, email=None, mobilePhone=None, password=None):
 
+        if firstName is None:
+            firstName = self.newUserData.firstName
+        if lastName is None:
+            lastName = self.newUserData.lastName
         if email is None:
             email = self.newUserData.email
         if password is None:
@@ -28,6 +32,8 @@ class PlayerPayloadGenerator:
             mobilePhone = self.newUserData.phone
 
         payload = {
+            "firstName": f"{firstName}",
+            "lastName": f"{lastName}",
             "email": f"{email}",
             "mobilePhone": "+358" + f"{mobilePhone}",
             "password": f"{password}"
@@ -36,17 +42,7 @@ class PlayerPayloadGenerator:
         return json.dumps(payload)
 
     @step("Create payload for new user registration step two.")
-    def registrationStepTwo(self, firstName=None, lastName=None, dateOfBirth=None, postCode=None, city=None,
-                            street=None, playerId=None, password=None):
-
-        if firstName is None:
-            firstName = self.newUserData.firstName
-
-        if lastName is None:
-            lastName = self.newUserData.lastName
-
-        if password is None:
-            password = self.newUserData.password
+    def registrationStepTwo(self, dateOfBirth=None, postCode=None, city=None, street=None, playerId=None):
 
         if dateOfBirth is None:
             dateOfBirth = self.faker.date_between_dates(date_start=datetime(1930, 1, 1),
@@ -67,9 +63,6 @@ class PlayerPayloadGenerator:
             "marketingOptIn": True,
             "cookiePolicyAccepted": True,
             "allConditions": True,
-            "firstName": f"{firstName}",
-            "lastName": f"{lastName}",
-            "password": f"{password}",
             "mediaTag": None,
             "provinceCode": None,
             "termsAndConditionsAcceptedVersion": 5,

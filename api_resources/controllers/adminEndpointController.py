@@ -5,7 +5,7 @@ from allure import step
 
 adminEndpointHeaders = {
     'Accept': '*/*',
-    'authority': ConfigManager.getConfig('MANGAADMINDEV', 'GETUSERSAUTHORITY'),
+    'authority': ConfigManager.getConfig('QBEDADMINDEV', 'GETUSERSAUTHORITY'),
 }
 
 # limit=20&position=0&search=&type=FULL ask question why seach is empty
@@ -16,9 +16,9 @@ class AdminController(ApiClient):
 
     @step("Get users.")
     def getUsers(self, params=None, idToken=None):
-        path = ConfigManager.getConfig('MANGAADMINDEV', 'ENDPOINTGETUSERS')
+        path = ConfigManager.getConfig('QBEDADMINDEV', 'ENDPOINTGETUSERS')
         adminEndpointHeaders['authorization'] = idToken
-        response = super().get(base_address=ConfigManager.getConfig('MANGAADMINDEV', 'URLGETUSERS'),
+        response = super().get(base_address=ConfigManager.getConfig('QBEDADMINDEV', 'URLGETUSERS'),
                                path=path, params=params,
                                headers=adminEndpointHeaders)
 

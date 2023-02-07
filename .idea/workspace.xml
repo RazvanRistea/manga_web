@@ -1,93 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="907b854e-a92e-4a78-a31a-bd8042d810e2" name="Changes" comment="" />
+    <list default="true" id="1d235c2d-dbf4-4472-b513-f062ddfccb3f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allureResultsHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/allureResultsHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/api_steps/player_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/api_steps/player_steps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/controllers/adminEndpointController.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/controllers/adminEndpointController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/controllers/cognitoLoginController.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/controllers/cognitoLoginController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/controllers/playerEndpointController.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/controllers/playerEndpointController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/generators/cognitoPayloadGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/generators/cognitoPayloadGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/generators/cognitoPayloadGeneratorPlayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/generators/cognitoPayloadGeneratorPlayer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_resources/generators/playerPayloadGenerators.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_resources/generators/playerPayloadGenerators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2L2CkasoawCZhqAn7mFAwIwdHj9" />
+  <component name="ProjectId" id="2LPd66tkjobbI23i0qosQkO4ICX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/razvan/Work/qa_manga_web"
+    "last_opened_file_path": "/Users/razvan/Work/qa_manga_web_v1"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest in test_user_login.py">
-    <configuration name="pytest in test_reset_password.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="qa_manga_web" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/web_tests/test_reset_password.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_user_login.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="qa_manga_web" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/web_tests/test_user_login.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_user_registration.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="qa_manga_web" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/web_tests/test_user_registration.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python tests.pytest in test_user_login.py" />
-        <item itemvalue="Python tests.pytest in test_user_registration.py" />
-        <item itemvalue="Python tests.pytest in test_reset_password.py" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="907b854e-a92e-4a78-a31a-bd8042d810e2" name="Changes" comment="" />
-      <created>1675059934916</created>
+      <changelist id="1d235c2d-dbf4-4472-b513-f062ddfccb3f" name="Changes" comment="" />
+      <created>1675776473644</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1675059934916</updated>
+      <updated>1675776473644</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

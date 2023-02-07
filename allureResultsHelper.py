@@ -97,7 +97,6 @@ class AllureReport(Exception):
         branch = os.environ['BRANCH']
         return branch, pipelineid
 
-
 def reporting():
     reportingtool = AllureReport()
     login = reportingtool.login()

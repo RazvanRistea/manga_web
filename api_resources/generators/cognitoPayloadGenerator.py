@@ -12,7 +12,7 @@ class CongnitoPayoloadGenerator:
 
     @step("Generateing Cognito get IdToken payload")
     def cognitoPayloadGenerator(self):
-        payload = {"ClientId": f"{ConfigManager.getConfig('COGNITOMANGAADMIN', 'CLIENTID')}",
+        payload = {"ClientId": f"{ConfigManager.getConfig('COGNITOQBETADMIN', 'CLIENTID')}",
                    "AuthFlow": "REFRESH_TOKEN_AUTH",
                    "AuthParameters": {
                        "REFRESH_TOKEN": f"{self.token}",

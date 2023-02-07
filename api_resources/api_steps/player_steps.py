@@ -19,25 +19,25 @@ class Player:
         payload_step_one = self.newPayloadGen.registrationStepOne()
         register_user_step_one = self.newPlayerController.registerStepOne(payload=payload_step_one)
 
-        sms_request_playload = self.newPayloadGen.requestSms(playerId=register_user_step_one["playerId"])
-        sms_request = self.newPlayerController.requestSMS(payload=sms_request_playload)
-
-        sms_verification_payload = self.newPayloadGen.verifySms(playerId=register_user_step_one["playerId"])
-        sms_verification = self.newPlayerController.verifySMS(payload=sms_verification_payload)
-
         payload_step_two = self.newPayloadGen.registrationStepTwo(playerId=register_user_step_one["playerId"])
         register_user_step_two = self.newPlayerController.registerStepTwo(payload=payload_step_two)
 
         payload_step_one = json.loads(payload_step_one)
         payload_step_two = json.loads(payload_step_two)
 
+        sms_request_playload = self.newPayloadGen.requestSms(playerId=register_user_step_one["playerId"])
+        sms_request = self.newPlayerController.requestSMS(payload=sms_request_playload)
+
+        sms_verification_payload = self.newPayloadGen.verifySms(playerId=register_user_step_one["playerId"])
+        sms_verification = self.newPlayerController.verifySMS(payload=sms_verification_payload)
+
         @step("Verify user data has been created.")
         def checkUser():
             BaseAssertions().assertEquals(sms_request.status_code, 200)
             BaseAssertions().assertEquals(sms_verification.status_code, 200)
-            BaseAssertions().assertEquals(payload_step_one['email'], register_user_step_one['email'])
-            BaseAssertions().assertEquals(payload_step_two['firstName'], register_user_step_two['firstName'])
-            BaseAssertions().assertEquals(payload_step_two['lastName'], register_user_step_two['lastName'])
+            BaseAssertions().assertEquals(payload_step_one['email'], register_user_step_two['email'])
+            BaseAssertions().assertEquals(payload_step_one['firstName'], register_user_step_two['firstName'])
+            BaseAssertions().assertEquals(payload_step_one['lastName'], register_user_step_two['lastName'])
             BaseAssertions().assertEquals(payload_step_two['postalCode'], register_user_step_two['postCode'])
             BaseAssertions().assertEquals(payload_step_one['mobilePhone'], register_user_step_two['mobilePhone'])
             BaseAssertions().assertEquals(payload_step_two['street'], register_user_step_two['street'])
@@ -72,6 +72,7 @@ class Player:
                                object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
 
         return user_data.MAIN[0].balance
+
 
 # player = Player()
 # print(player.registerNewUser())

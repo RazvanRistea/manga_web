@@ -13,7 +13,7 @@ class CongnitoPayoloadGeneratorPlayer:
     @step("Generateing Cognito get IdToken payload")
     def cognitoPayloadGenerator(self, password, username):
         self.token = self.newAwsCognito.getAwsToken(password=password, username=username)
-        payload = {"ClientId": f"{ConfigManager.getConfig('COGNITOMANGAPLAYER', 'CLIENTID')}",
+        payload = {"ClientId": f"{ConfigManager.getConfig('COGNITOQBETPLAYER', 'CLIENTID')}",
                    "AuthFlow": "REFRESH_TOKEN_AUTH",
                    "AuthParameters": {
                        "REFRESH_TOKEN": f"{self.token}",

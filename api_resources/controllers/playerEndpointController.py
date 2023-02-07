@@ -4,7 +4,7 @@ from allure import step
 
 registrationHeaders = {
     'content-type': 'application/json;charset=UTF-8',
-    'sitecontext': "{\"siteId\": \"3\"}"
+    'sitecontext': "{\"siteId\": \"2\"}"
 }
 
 getBalanceHeaders = {
@@ -20,9 +20,9 @@ class PlayerController(ApiClient):
 
     @step("First step register new user.")
     def registerStepOne(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'REGISTRATION-API')
+        path = ConfigManager.getConfig('QBETDEV', 'REGISTRATION-API')
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PLAYER-EXECUTE-URL'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PLAYER-EXECUTE-URL'),
                                 path=path, data=payload,
                                 headers=registrationHeaders)
 
@@ -30,9 +30,9 @@ class PlayerController(ApiClient):
 
     @step("Second step register new user.")
     def registerStepTwo(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'REGISTRATION-API')
+        path = ConfigManager.getConfig('QBETDEV', 'REGISTRATION-API')
 
-        response = super().put(base_address=ConfigManager.getConfig('MANGADEV', 'PLAYER-EXECUTE-URL'),
+        response = super().put(base_address=ConfigManager.getConfig('QBETDEV', 'PLAYER-EXECUTE-URL'),
                                path=path, data=payload,
                                headers=registrationHeaders)
 
@@ -42,7 +42,7 @@ class PlayerController(ApiClient):
     def getBalance(self, idToken=None):
         getBalanceHeaders['authorization'] = idToken
         path = '/'
-        response = super().get(base_address=ConfigManager.getConfig('MANGADEV', 'PLAYER-EXECUTE-WALLET-URL'),
+        response = super().get(base_address=ConfigManager.getConfig('QBETDEV', 'PLAYER-EXECUTE-WALLET-URL'),
                                path=path,
                                headers=getBalanceHeaders)
 
@@ -50,10 +50,10 @@ class PlayerController(ApiClient):
 
     @step("Request SMS")
     def requestSMS(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'REGISTRATION-API') + ConfigManager.getConfig('MANGADEV',
+        path = ConfigManager.getConfig('QBETDEV', 'REGISTRATION-API') + ConfigManager.getConfig('QBETDEV',
                                                                                                 'SMS-REQUEST-API')
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PLAYER-EXECUTE-URL'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PLAYER-EXECUTE-URL'),
                                 path=path, data=payload,
                                 headers=registrationHeaders)
 
@@ -61,10 +61,10 @@ class PlayerController(ApiClient):
 
     @step("Send SMS confirmation")
     def verifySMS(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'REGISTRATION-API') + ConfigManager.getConfig('MANGADEV',
+        path = ConfigManager.getConfig('QBETDEV', 'REGISTRATION-API') + ConfigManager.getConfig('QBETDEV',
                                                                                                 'SMS-VERIFICATION-API')
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PLAYER-EXECUTE-URL'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PLAYER-EXECUTE-URL'),
                                 path=path, data=payload,
                                 headers=registrationHeaders)
 
@@ -72,10 +72,10 @@ class PlayerController(ApiClient):
 
     @step("Get Pariplay Token")
     def requestPariplayToken(self, payload=None, idToken=None):
-        path = ConfigManager.getConfig('MANGADEV', 'ENDPOINT-PAIRPLAY-REAL')
+        path = ConfigManager.getConfig('QBETDEV', 'ENDPOINT-PAIRPLAY-REAL')
         paripalyContextHeaders['authorization'] = "Bearer " + idToken
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-GAMES-AUTHORITY'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-GAMES-AUTHORITY'),
                                 path=path, data=payload,
                                 headers=paripalyContextHeaders)
 
@@ -83,9 +83,9 @@ class PlayerController(ApiClient):
 
     @step("Auth Pariplay")
     def authPariplay(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-ENDPOINT-AUTH')
+        path = ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-ENDPOINT-AUTH')
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-URL-STAGING'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-URL-STAGING'),
                                 path=path, data=payload,
                                 headers=paripalyContextHeaders)
 
@@ -93,9 +93,9 @@ class PlayerController(ApiClient):
 
     @step("Pariplay Credit")
     def pariplayCredit(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-ENDPOINT-CREDIT')
+        path = ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-ENDPOINT-CREDIT')
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-URL-STAGING'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-URL-STAGING'),
                                 path=path, data=payload,
                                 headers=paripalyContextHeaders)
 
@@ -103,9 +103,9 @@ class PlayerController(ApiClient):
 
     @step("Pariplay Debit")
     def pariplayDebit(self, payload=None):
-        path = ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-ENDPOINT-DEBIT')
+        path = ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-ENDPOINT-DEBIT')
 
-        response = super().post(base_address=ConfigManager.getConfig('MANGADEV', 'PAIRPLAY-URL-STAGING'),
+        response = super().post(base_address=ConfigManager.getConfig('QBETDEV', 'PAIRPLAY-URL-STAGING'),
                                 path=path, data=payload,
                                 headers=paripalyContextHeaders)
 
